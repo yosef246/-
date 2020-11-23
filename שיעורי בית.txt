@@ -1,0 +1,80 @@
+package java1;
+
+import java.util.Scanner;
+
+public class java7{
+	
+	public static void main(String[] args) {
+		int num;
+		Scanner s = new Scanner(System.in);
+		System.out.println("enter your number");
+		num = s.nextInt();
+		System.out.println(prime(num));
+	}
+	
+	 public static boolean prime(int num) {
+		boolean prime = true;
+	   for(int i = 2; i < num/2; i++) {
+		    	if(num % i == 0) {
+		    		prime = false;
+		    	}
+		    	
+		    	
+	   }
+		  return prime;
+		
+		
+	
+	
+}
+
+
+
+//עבודה 2
+
+
+
+	
+	
+		boolean f = true;
+		int i;
+		int count = 0;
+		
+		for(int j = 2; j<=10000;j++) {
+			
+			i=2;
+			f = true;
+			while(i<=j/2 && f==true) {
+				if(j % i ==0) {
+					f=false;
+				}
+				i++;
+			}
+			
+			if(f == true) {
+				System.out.println("prime number" + j);
+				count++;
+				if(count>=1000) {
+					break;
+				}
+				System.out.println(count);
+			}
+		}
+	
+
+
+//עבודה 3
+
+
+	public static boolen primeF(int num) {
+		for(int i=2; i<Math.floor(num); i++) {
+			if(num % i == 0) {
+				return false;
+			}
+		}
+	
+	return true;
+
+}
+	}
+	}
